@@ -1,6 +1,9 @@
-import React from 'react'
+'use client';
+import React, { useState } from 'react'
 
 function UserProfile() {
+    const menu = ["Videos", "Playlists", "Tweets", "Subscribers"]
+    const [showMenu, setShowMenu] = useState("Videos")
     return (
         <>
             <div className="relative min-h-[150px] w-full pt-[16.28%]">
@@ -47,10 +50,16 @@ function UserProfile() {
                 </div>
             </div>
             <ul className="no-scrollbar sticky top-[66px] z-[2] flex flex-row gap-x-2 overflow-auto border-b-2 border-gray-400 bg-[#121212] py-2 sm:top-[82px] px-4">
-                <li className="w-full"><button className="w-full border-b-2 border-[#ae7aff] bg-white px-3 py-1.5 text-[#ae7aff]">Videos</button></li>
-                <li className="w-full"><button className="w-full border-b-2 border-transparent px-3 py-1.5 text-gray-400">Playlist</button></li>
+                {
+                    menu.map((item, index) => (
+                        <li className="w-full" key={index} onClick={() => setShowMenu(item)}>
+                            <button className={`w-full border-b-2 px-3 py-1.5 ${showMenu === item ? "border-[#ae7aff] bg-white text-[#ae7aff]" : "border-transparent text-gray-400"}`}>{item}</button>
+                        </li>
+                    ))
+                }
+                {/* <li className="w-full"><button className="w-full border-b-2 border-[#ae7aff] bg-white px-3 py-1.5 text-[#ae7aff]">Videos</button></li>
                 <li className="w-full"><button className="w-full border-b-2 border-transparent px-3 py-1.5 text-gray-400">Tweets</button></li>
-                <li className="w-full"><button className="w-full border-b-2 border-transparent px-3 py-1.5 text-gray-400">Subscribed</button></li>
+                <li className="w-full"><button className="w-full border-b-2 border-transparent px-3 py-1.5 text-gray-400">Subscribed</button></li> */}
             </ul>
         </>
     )

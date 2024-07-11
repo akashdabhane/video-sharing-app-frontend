@@ -1,0 +1,110 @@
+import React from 'react'
+
+function VideoListListView2() {
+    const videosList = [
+        {
+            id: 0,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+        {
+            id: 1,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+        {
+            id: 2,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+        {
+            id: 3,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+        {
+            id: 4,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+        {
+            id: 5,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+        {
+            id: 6,
+            thumbnail: "https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            duration: "20:45",
+            title: "JavaScript Fundamentals: Variables and Data Types",
+            views: "10.3k",
+            channel: "Code Master",
+            uploadedAt: "44 minutes",
+        },
+    ]
+
+
+    return (
+        <>
+            <div className="col-span-12 flex w-full shrink-0 flex-col gap-3 lg:w-[350px] xl:w-[400px]">
+                {
+                    videosList.map((item) => (
+                        <div className="w-full gap-x-2 border pr-2 md:flex">
+                            <div className="relative mb-2 w-full md:mb-0 md:w-5/12">
+                                <div className="w-full pt-[56%]">
+                                    <div className="absolute inset-0">
+                                        <img
+                                            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                            alt="JavaScript Fundamentals: Variables and Data Types"
+                                            className="h-full w-full" />
+                                    </div>
+                                    <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">20:45</span>
+                                </div>
+                            </div>
+                            <div className="flex gap-x-2 px-2 pb-4 pt-1 md:w-7/12 md:px-0 md:py-0.5">
+                                <div className="h-12 w-12 shrink-0 md:hidden">
+                                    <img
+                                        src="https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="reactpatterns"
+                                        className="h-full w-full rounded-full" />
+                                </div>
+                                <div className="w-full pt-1 md:pt-0">
+                                    <h6 className="mb-1 text-sm font-semibold">JavaScript Fundamentals: Variables and Data Types</h6>
+                                    <p className="mb-0.5 mt-2 text-sm text-gray-200">Code Master</p>
+                                    <p className="flex text-sm text-gray-200">10.3k Views · 44 minutes ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+                
+            </div>
+        </>
+    )
+}
+
+export default VideoListListView2
