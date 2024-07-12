@@ -5,90 +5,6 @@ import VideoListListView2 from '../components/VideoListListView2'
 function page() {
     return (
         <>
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-woman-reading-book-on-a-bench.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/18107025/pexels-photo-18107025/free-photo-of-man-reading-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/18094275/pexels-photo-18094275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/13847596/pexels-photo-13847596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/7775637/pexels-photo-7775637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/2519817/pexels-photo-2519817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1739849/pexels-photo-1739849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1739854/pexels-photo-1739854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1144256/pexels-photo-1144256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1144260/pexels-photo-1144260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1144276/pexels-photo-1144276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1144274/pexels-photo-1144274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1144231/pexels-photo-1144231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1144250/pexels-photo-1144250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1115824/pexels-photo-1115824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <link
-                rel="preload"
-                as="image"
-                href="https://images.pexels.com/photos/1115808/pexels-photo-1115808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
             <div className="h-screen overflow-y-auto bg-[#121212] text-white">
                 <Navbar />
                 <div className="flex min-h-[calc(100vh-66px)] sm:min-h-[calc(100vh-82px)]">
@@ -577,7 +493,7 @@ function page() {
                                     </div>
                                 </div>
                                 <button className="peer w-full rounded-lg border p-4 text-left duration-200 hover:bg-white/5 focus:bg-white/5 sm:hidden"><h6 className="font-semibold">573 Comments...</h6></button>
-                                
+
                                 {/* create component for this comments */}
                                 <div
                                     className="fixed inset-x-0 top-full z-[60] h-[calc(100%-69px)] overflow-auto rounded-lg border bg-[#121212] p-4 duration-200 hover:top-[67px] peer-focus:top-[67px] sm:static sm:h-auto sm:max-h-[500px] lg:max-h-none">
