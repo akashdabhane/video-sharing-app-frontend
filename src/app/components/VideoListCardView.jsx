@@ -1,3 +1,5 @@
+'use client'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 function VideoListCardView() {
@@ -57,6 +59,8 @@ function VideoListCardView() {
             uploadedAt: "15 hours ago"
         },
     ]
+
+    const router = useRouter()
     
     return (
         <>
@@ -66,7 +70,7 @@ function VideoListCardView() {
                         <div class="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4 p-4">
                             {
                                 videos.map((item) => (
-                                    <div class="w-full" key={item.id}>
+                                    <div class="w-full cursor-pointer" key={item.id} onClick={() => router.push("/watch")}>
                                         <div class="relative mb-2 w-full pt-[56%]">
                                             <div class="absolute inset-0">
                                                 <img

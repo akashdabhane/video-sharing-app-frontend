@@ -1,6 +1,9 @@
+'use client'; 
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 function VideoListListView() {
+    const router = useRouter()
     const videos = [
         {
             id: 1,
@@ -68,7 +71,7 @@ function VideoListListView() {
 
                             {
                                 videos.map((item) => (
-                                    <div class="w-full max-w-3xl gap-x-4 md:flex" key={item.id}>
+                                    <div class="w-full max-w-3xl gap-x-4 md:flex cursor-pointer" key={item.id} onClick={() => router.push("/watch")}>
                                         <div class="relative mb-2 w-full md:mb-0 md:w-5/12">
                                             <div class="w-full pt-[56%]">
                                                 <div class="absolute inset-0">

@@ -1,12 +1,39 @@
-import React from 'react'
+'use client';
+import { useFormik } from 'formik'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { registrationSchema } from '../validationSchema/registerSchema'
 
 function page() {
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+        confirmPassword: ""
+    })
+
+    const initialValues = {
+        email: "",
+        password: "",
+        confirmPassword: "",
+    }
+
+    const formik = useFormik({
+        initialValues,
+        validationSchema: registrationSchema,
+        validateOnChange: true,
+        validateOnBlur: false,
+        onSubmit: (values, action) => {
+            console.log(values);
+            setFormData(values);
+            action.resetForm();
+        }
+    })
     return (
         <div className="h-screen overflow-y-auto bg-[#121212] text-white">
-            <div className="mx-auto my-8 flex w-full max-w-sm flex-col px-4">
+            <form onSubmit={formik.handleSubmit} className="mx-auto my-8 flex w-full max-w-sm flex-col px-4">
                 <div className="mx-auto inline-block w-16">
                     <svg
-                        style={{width:100 + "%"}}
+                        style={{ width: 100 + "%" }}
                         viewBox="0 0 63 64"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -53,18 +80,75 @@ function page() {
                     </svg>
                 </div>
                 <div className="mb-6 w-full text-center text-2xl font-semibold uppercase">Play</div>
-                <label
-                    for="email"
-                    className="mb-1 inline-block text-gray-300">
-                    Email*
-                </label>
-                <input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    className="mb-4 rounded-lg border bg-transparent px-3 py-2" />
+                <div className="mb-4 ">
+                    <label
+                        for="email"
+                        className="mb-1 inline-block text-gray-300">
+                        Email*
+                    </label>
+                    <input
+                        id="email"
+                        type="email"
+                        name='email'
+                        placeholder="Enter your email"
+                        className="rounded-lg border bg-transparent px-3 py-2 block w-full"
+                        value={formik.values.email}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur} />
+
+                    {
+                        formik.touched.email && formik.errors.email ?
+                            <p className="text-red-600">{formik.errors.email}</p>
+                            : null
+                    }
+                </div>
+
+                <div className="mb-4 ">
+                    <label
+                        for="password"
+                        className="mb-1 inline-block text-gray-300">
+                        Password*
+                    </label>
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        className="rounded-lg border bg-transparent px-3 py-2 block w-full"
+                        value={formik.values.password}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur} />
+
+                    {
+                        formik.touched.password && formik.errors.password ?
+                            <p className="text-red-600">{formik.errors.password}</p>
+                            : null
+                    }
+                </div>
+
+                <div className="mb-4 ">
+                    <input
+                        id="confirmPassword"
+                        type="password"
+                        name='confirmPassword'
+                        placeholder="confirm password"
+                        className="rounded-lg border bg-transparent px-3 py-2 block w-full"
+                        value={formik.values.confirmPassword}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur} />
+
+                    {
+                        formik.touched.confirmPassword && formik.errors.confirmPassword ?
+                            <p className="text-red-600">{formik.errors.confirmPassword}</p>
+                            : null
+                    }
+                </div>
                 <button className="bg-[#ae7aff] px-4 py-3 text-black">Sign up with Email</button>
-            </div>
+                <p className='w-full text-center my-2'>
+                    Already have account?
+                    <Link href={"/login"} className='text-[#ae7aff]'> login</Link>
+                </p>
+            </form>
         </div>
 
     )
