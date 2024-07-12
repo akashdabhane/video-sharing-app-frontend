@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import VideoListListView2 from '../components/VideoListListView2'
+import Image from 'next/image'
 
 function page() {
     return (
@@ -452,10 +453,12 @@ function page() {
                                     <div className="mt-4 flex items-center justify-between">
                                         <div className="flex items-center gap-x-4">
                                             <div className="mt-2 h-12 w-12 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="reactpatterns"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="text-gray-200">React Patterns</p>
@@ -508,10 +511,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/18148932/pexels-photo-18148932/free-photo-of-woman-reading-book-on-a-bench.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="sarahjv"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -527,10 +532,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/18107025/pexels-photo-18107025/free-photo-of-man-reading-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="mikerod"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -546,10 +553,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/18096595/pexels-photo-18096595/free-photo-of-music-on-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="emilyt"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -565,10 +574,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/18094275/pexels-photo-18094275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="davidc"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -584,10 +595,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/13847596/pexels-photo-13847596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="alex_p"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -603,10 +616,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/7775637/pexels-photo-7775637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="jessicalee"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -622,10 +637,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="ryanjax"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">
@@ -641,10 +658,12 @@ function page() {
                                     <div>
                                         <div className="flex gap-x-4">
                                             <div className="mt-2 h-11 w-11 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="lauraw"
-                                                    className="h-full w-full rounded-full" />
+                                                    className="h-full w-full rounded-full"
+                                                    width={100}
+                                                    height={100} />
                                             </div>
                                             <div className="block">
                                                 <p className="flex items-center text-gray-200">

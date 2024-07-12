@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function TweetList() {
@@ -45,12 +46,15 @@ function TweetList() {
             <div class="py-4">
                 {
                     tweets.map((item) => (
-                        <div class="flex gap-3 border-b border-gray-700 py-4 last:border-b-transparent">
+                        <div class="flex gap-3 border-b border-gray-700 py-4 last:border-b-transparent" key={item.id}>
                             <div class="h-14 w-14 shrink-0">
-                                <img
+                                <Image
                                     src={item.profilePicture}
                                     alt="React Patterns"
-                                    class="h-full w-full rounded-full" />
+                                    class="h-full w-full rounded-full"
+                                    width={100}
+                                    height={0}
+                                />
                             </div>
                             <div class="w-full">
                                 <h4 class="mb-1 flex items-center gap-x-2">
@@ -101,7 +105,7 @@ function TweetList() {
                         </div>
                     ))
                 }
-                
+
             </div>
         </>
     )

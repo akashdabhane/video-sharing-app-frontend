@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function PlaylistsCard() {
@@ -49,10 +50,12 @@ function PlaylistsCard() {
                             <div className="w-full" key={item.id}>
                                 <div className="relative mb-2 w-full pt-[56%]">
                                     <div className="absolute inset-0">
-                                        <img
+                                        <Image
                                             src={item.thumbnail}
                                             alt="React Mastery"
-                                            className="h-full w-full" />
+                                            className="h-full w-full"
+                                            width={100}
+                                            height={0} />
                                         <div className="absolute inset-x-0 bottom-0">
                                             <div className="relative border-t bg-white/30 p-4 text-white backdrop-blur-sm before:absolute before:inset-0 before:bg-black/40">
                                                 <div className="relative z-[1]">

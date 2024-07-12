@@ -1,4 +1,5 @@
-"use client"; 
+"use client";
+import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
@@ -76,24 +77,30 @@ function VideoListListView2() {
             <div className="col-span-12 flex w-full shrink-0 flex-col gap-3 lg:w-[350px] xl:w-[400px]">
                 {
                     videosList.map((item) => (
-                        <div className="w-full gap-x-2 border pr-2 md:flex" onClick={() => router.push("/watch")}>
+                        <div className="w-full gap-x-2 border pr-2 md:flex" key={item.id} onClick={() => router.push("/watch")}>
                             <div className="relative mb-2 w-full md:mb-0 md:w-5/12">
                                 <div className="w-full pt-[56%]">
                                     <div className="absolute inset-0">
-                                        <img
+                                        <Image
                                             src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                             alt="JavaScript Fundamentals: Variables and Data Types"
-                                            className="h-full w-full" />
+                                            className="h-full w-full"
+                                            width={100}
+                                            height={0}
+                                        />
                                     </div>
                                     <span className="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">20:45</span>
                                 </div>
                             </div>
                             <div className="flex gap-x-2 px-2 pb-4 pt-1 md:w-7/12 md:px-0 md:py-0.5">
                                 <div className="h-12 w-12 shrink-0 md:hidden">
-                                    <img
+                                    <Image
                                         src="https://images.pexels.com/photos/18264716/pexels-photo-18264716/free-photo-of-man-people-laptop-internet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                         alt="reactpatterns"
-                                        className="h-full w-full rounded-full" />
+                                        className="h-full w-full rounded-full"
+                                        width={100}
+                                        height={0}
+                                    />
                                 </div>
                                 <div className="w-full pt-1 md:pt-0">
                                     <h6 className="mb-1 text-sm font-semibold">JavaScript Fundamentals: Variables and Data Types</h6>
@@ -104,7 +111,7 @@ function VideoListListView2() {
                         </div>
                     ))
                 }
-                
+
             </div>
         </>
     )

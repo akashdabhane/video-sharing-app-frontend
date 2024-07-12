@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React, { useState } from 'react'
 
 function UserProfile() {
@@ -8,17 +9,22 @@ function UserProfile() {
         <>
             <div className="relative min-h-[150px] w-full pt-[16.28%]">
                 <div className="absolute inset-0 overflow-hidden">
-                    <img
+                    <Image
                         src="https://images.pexels.com/photos/1092424/pexels-photo-1092424.jpeg?auto=compress"
-                        alt="cover-photo" />
+                        alt="cover-photo"
+                        width={2000}
+                        height={400}
+                    />
                 </div>
             </div>
             <div className="flex flex-wrap gap-4 pb-4 pt-6 px-4 ">
                 <span className="relative -mt-12 inline-block h-28 w-28 shrink-0 overflow-hidden rounded-full border-2">
-                    <img
+                    <Image
                         src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="Channel"
-                        className="h-full w-full" />
+                        className="h-full w-full"
+                        width={100}
+                        height={0} />
                 </span>
                 <div className="mr-auto inline-block">
                     <h1 className="font-bolg text-xl">React Patterns</h1>

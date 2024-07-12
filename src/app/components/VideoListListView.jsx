@@ -1,4 +1,5 @@
-'use client'; 
+'use client';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 
@@ -75,27 +76,32 @@ function VideoListListView() {
                                         <div class="relative mb-2 w-full md:mb-0 md:w-5/12">
                                             <div class="w-full pt-[56%]">
                                                 <div class="absolute inset-0">
-                                                    <img
+                                                    <Image
                                                         src={item.thumbnai}
                                                         alt="JavaScript Fundamentals: Variables and Data Types"
-                                                        class="h-full w-full" />
+                                                        class="h-full w-full"
+                                                        width={100}
+                                                        height={0} />
                                                 </div>
                                                 <span class="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">{item.duration}</span>
                                             </div>
                                         </div>
                                         <div class="flex gap-x-2 md:w-7/12">
                                             <div class="h-10 w-10 shrink-0 md:hidden">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="codemaster"
-                                                    class="h-full w-full rounded-full" />
+                                                    class="h-full w-full rounded-full"
+                                                    // width={100}
+                                                    // height={0}
+                                                />
                                             </div>
                                             <div class="w-full">
                                                 <h6 class="mb-1 font-semibold md:max-w-[75%]">{item.title}</h6>
                                                 <p class="flex text-sm text-gray-200 sm:mt-3">{item.views}Views · {item.uploadedAt}</p>
                                                 <div class="flex items-center gap-x-4">
                                                     <div class="mt-2 hidden h-10 w-10 shrink-0 md:block">
-                                                        <img
+                                                        <Image
                                                             src="https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                             alt="codemaster"
                                                             class="h-full w-full rounded-full" />

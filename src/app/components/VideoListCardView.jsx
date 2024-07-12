@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
@@ -73,19 +74,23 @@ function VideoListCardView() {
                                     <div class="w-full cursor-pointer" key={item.id} onClick={() => router.push("/watch")}>
                                         <div class="relative mb-2 w-full pt-[56%]">
                                             <div class="absolute inset-0">
-                                                <img
+                                                <Image
                                                     src={item.thumbnai}
                                                     alt="JavaScript Fundamentals: Variables and Data Types"
-                                                    class="h-full w-full" />
+                                                    class="h-full w-full" 
+                                                    width={100}
+                                            height={0}/>
                                             </div>
                                             <span class="absolute bottom-1 right-1 inline-block rounded bg-black px-1.5 text-sm">{item.duration}</span>
                                         </div>
                                         <div class="flex gap-x-2">
                                             <div class="h-10 w-10 shrink-0">
-                                                <img
+                                                <Image
                                                     src="https://images.pexels.com/photos/3532545/pexels-photo-3532545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                                     alt="codemaster"
-                                                    class="h-full w-full rounded-full" />
+                                                    class="h-full w-full rounded-full"
+                                                    width={100}
+                                            height={0} />
                                             </div>
                                             <div class="w-full">
                                                 <h6 class="mb-1 font-semibold">{item.title}</h6>
